@@ -6,6 +6,8 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {});
 
+app.use(express.static('public'));
+
 io.on("connection", (socket) => {
   
 });
